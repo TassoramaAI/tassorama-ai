@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tassorama AI – Automazione Intelligente per il Tuo Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      justify-content: center;
+      gap: 40px;
+    }
+    .left {
+      flex: 1 1 500px;
+      max-width: 600px;
+      position: relative;
+    }
+    .slider-box {
+      position: relative;
+      height: 260px;
+      overflow: hidden;
+    }
+    .feature-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+      padding: 30px;
+      border-left: 5px solid #ffd166;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .feature-slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 1;
+    }
+    .feature-slide h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #f4a261;
+    }
+    .feature-slide p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    .right {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      color: #333;
+    }
+    .right h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1d3557;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .contact-btn {
+      width: 100%;
+      background: #1d3557;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-btn:hover {
+      background: #457b9d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1d3557;
+      margin-top: 40px;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      filter: brightness(1000%);
+    }
+
+    @media(max-width: 768px) {
+      .slider-box {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tassorama AI</h1>
+  <p>Business intelligente. Crescita più veloce. CRM potenziato con Intelligenza Artificiale.</p>
+</header>
+
+<div class="main">
+  <div class="left">
+    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 30px; color: #ffd166;">
+      Perché scegliere Tassorama AI?
+    </h2>
+    <div class="slider-box">
+      <div class="feature-slide active">
+        <h3>🔍 Funnel Intelligenti con AI</h3>
+        <p>Automatizza il percorso del cliente con analisi predittiva e intelligenza artificiale.</p>
+      </div>
+      <div class="feature-slide">
+        <h3>📦 Integrazione Odoo</h3>
+        <p>Compatibilità totale con CRM, Vendite, Fatturazione, Magazzino e molto altro.</p>
+      </div>
+      <div class="feature-slide">
+        <h3>🌐 Accesso Multilingue</h3>
+        <p>Supporto per Italiano, Inglese, Urdu e altre lingue locali.</p>
+      </div>
+      <div class="feature-slide">
+        <h3>🔐 Sicurezza Avanzata</h3>
+        <p>Dati criptati, accessi sicuri e gestione dei ruoli aziendali.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <h3>Contattaci</h3>
+    <form>
+      <div class="form-group">
+        <label for="name">Nome *</label>
+        <input type="text" id="name" placeholder="Il tuo nome completo" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="tuo@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefono *</label>
+        <input type="tel" id="phone" placeholder="+39 123 456 7890" required>
+      </div>
+      <button type="submit" class="contact-btn">📨 Inviaci un messaggio</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Tassorama AI – Tutti i diritti riservati.</p>
+  <div class="social-icons">
+    <a href="https://wa.me/391234567890" target="_blank" title="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+    </a>
+    <a href="https://facebook.com/tassorama" target="_blank" title="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/tassorama" target="_blank" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.feature-slide');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3500);
+</script>
+
+</body>
+</html>
